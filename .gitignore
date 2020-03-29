@@ -1,0 +1,31 @@
+# Common Code Editors
+.idea
+.vscode
+
+#css
+*.css
+
+# dependencies
+/node_modules
+
+# testing
+/coverage
+
+# production
+/build
+
+# environment variables
+.env
+
+# misc
+.DS_Store
+.env.local
+.env.test.local
+.env.production.local
+.git-authors
+
+debug.log
+npm-debug.log*
+
+# Yarn generated files
+src/**/__generated__
