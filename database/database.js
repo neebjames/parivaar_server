@@ -1,6 +1,6 @@
 import Sequelize from 'sequelize';
 
-export default sequelize = new Sequelize('parivaar_db', 'postgres', 'root', {
+const sequelize = new Sequelize('parivaar_db', 'postgres', 'root', {
   host: 'localhost',
   dialect: 'postgres',
   operatorsAliases: false,
@@ -12,6 +12,8 @@ export default sequelize = new Sequelize('parivaar_db', 'postgres', 'root', {
     idle: 10000
   },
 });
+
+export default sequelize;
 
 
 // import {Pool} from 'pg'
