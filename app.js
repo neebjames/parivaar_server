@@ -14,7 +14,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
-app.use(express.favicon());
 app.get('/', (req, res) => {
   res.status(200).json({ message: 'Welcome to Node.js & Express' });
 });
@@ -34,6 +33,6 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-app.listen(4000, () => console.log('Server listening on port 4000!'))
+app.listen(process.env.PORT || 4000), () => console.log('Server listening on port 4000!'))
 
 //module.exports = app;
