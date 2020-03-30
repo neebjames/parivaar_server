@@ -2,6 +2,10 @@
   "name": "parivaar-server",
   "version": "0.0.0",
   "private": true,
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "main": "app.js",
   "scripts": {
     "start": "babel-node app.js --exec babel-node"
   },
