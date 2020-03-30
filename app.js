@@ -4,19 +4,18 @@ import path from 'path';
 import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 import cors from 'cors';
-import parivaarAPI from './routes/parivaarAPI';
+const parivaarAPI = require('./routes/parivaarAPI');
 const app = express();
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-//app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
 app.get('/', (req, res) => {
   res.status(200).json({ message: 'Welcome to Node.js & Express' });
 });
-//app.use('/', parivaarAPI);
+app.use('/', parivaarAPI);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
