@@ -5,9 +5,8 @@
   "engines": {
     "node": ">=10.0.0"
   },
-  "main": "app.js",
   "scripts": {
-    "start": "babel-node app.js --exec babel-node"
+    "start": "babel-node start.js --exec babel-node"
   },
   "dependencies": {
     "babel-cli": "^6.26.0",
