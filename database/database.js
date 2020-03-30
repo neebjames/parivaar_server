@@ -1,5 +1,6 @@
 import Sequelize from 'sequelize';
-export const sequelize = new Sequelize('parivaar_db', 'postgres', 'root', {
+import {Pool} from 'pg'
+const sequelize = new Sequelize('parivaar_db', 'postgres', 'root', {
   host: 'localhost',
   dialect: 'postgres',
   operatorsAliases: false,
@@ -15,13 +16,15 @@ export const sequelize = new Sequelize('parivaar_db', 'postgres', 'root', {
 
 // import {Pool} from 'pg'
 
-// export const pool = new Pool({
-//   user: 'postgres',
-//   host: 'localhost',
-//   database: 'parivaar_db',
-//   password: 'root',
-//   port: 5432,
-//   max: 20,
-//   idleTimeoutMillis: 30000,
-//   connectionTimeoutMillis: 2000,
-// })
+const pool = new Pool({
+  user: 'postgres',
+  host: 'localhost',
+  database: 'parivaar_db',
+  password: 'root',
+  port: 5432,
+  max: 20,
+  idleTimeoutMillis: 30000,
+  connectionTimeoutMillis: 2000,
+})
+
+module.exports = {sequelize, pool}
