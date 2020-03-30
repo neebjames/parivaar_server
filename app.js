@@ -16,7 +16,7 @@ app.use(cors());
 app.get('/', (req, res) => {
   res.status(200).json({ message: 'Welcome to Node.js & Express' });
 });
-app.use('/', parivaarAPI);
+//app.use('/', parivaarAPI);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
