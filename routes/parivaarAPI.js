@@ -1,4 +1,4 @@
-import express from 'express'
+var express = require('express');
 import { getFamilyDetail } from './../database/query'
 const router = express.Router();
 
