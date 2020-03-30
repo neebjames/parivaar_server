@@ -1,5 +1,5 @@
 import express from 'express';
-import getFamilyDetail from './../database/query';
+import {getFamilyDetail} from './../database/query';
 const router = express.Router();
 
 router.get('/familydetails', function(request, response) {
