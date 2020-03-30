@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-export const sequelize = new Sequelize('parivaar_db', 'postgres', 'root', {
+const sequelize = new Sequelize('parivaar_db', 'postgres', 'root', {
   host: 'localhost',
   dialect: 'postgres',
   operatorsAliases: false,
@@ -11,6 +11,8 @@ export const sequelize = new Sequelize('parivaar_db', 'postgres', 'root', {
     idle: 10000
   },
 });
+
+module.exports = {sequelize}
 
 
 
