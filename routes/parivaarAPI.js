@@ -14,4 +14,4 @@ router.get('/familydetails', function(request, response) {
     
 });
 
-module.exports = router;
+module.default = router;
