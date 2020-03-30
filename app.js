@@ -1,11 +1,10 @@
-var createError = require('http-errors');
+import createError from 'http-errors';
 import express from 'express';
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-var cors = require('cors');
-
-var parivaarAPI = require('./routes/parivaarAPI');
+import path from 'path';
+import cookieParser from 'cookie-parser';
+import logger from 'morgan';
+import cors from 'cors';
+import parivaarAPI from './routes/parivaarAPI';
 const app = express();
 
 app.use(logger('dev'));

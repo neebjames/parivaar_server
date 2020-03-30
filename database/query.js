@@ -1,7 +1,5 @@
-var pool = require('./database')
+import pool from './database';
 
-const getFamilyDetail = async () => {
+export const getFamilyDetail = async () => {
  return await pool.query('SELECT name from family_detail')
 }
-
-module.exports = {getFamilyDetail}

@@ -1,5 +1,5 @@
-const Sequelize = require('sequelize');
-const sequelize = new Sequelize('parivaar_db', 'postgres', 'root', {
+import Sequelize from 'sequelize';
+export const sequelize = new Sequelize('parivaar_db', 'postgres', 'root', {
   host: 'localhost',
   dialect: 'postgres',
   operatorsAliases: false,
@@ -11,9 +11,6 @@ const sequelize = new Sequelize('parivaar_db', 'postgres', 'root', {
     idle: 10000
   },
 });
-
-module.exports = {sequelize}
-
 
 
 // import {Pool} from 'pg'
