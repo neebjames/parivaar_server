@@ -15,7 +15,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
 app.get('/', (req, res) => {
-  res.send('Welcome to Node.js & Express App');
+  res.status(200).json({ message: 'Welcome to Node.js & Express' });
 });
 app.use('/', parivaarAPI);
 // catch 404 and forward to error handler
