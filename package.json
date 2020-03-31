@@ -7,7 +7,7 @@
   },
   "type": "module",
   "scripts": {
-    "start": "babel-node app.js --exec babel-node"
+    "start": "babel-node app.js --exec babel-node --experimental-modules"
   },
   "dependencies": {
     "babel-cli": "^6.26.0",
