@@ -4,12 +4,10 @@ const router = express.Router();
 
 router.get('/familydetails', function(request, response) {
     getFamilyDetail()
-    .then(familyDetail => {
-        if(familyDetail)
+    .then(familyDetails => {
+        if(familyDetails && familyDetails.length > 0)
         {
-            console.log(familyDetail)
-            response.status(200).json(familyDetail[0]);
-            //response.send(familyDetail[0].name);
+            response.status(200).json(familyDetails[0]);
         }
     })
     .catch(err => console.error('Error executing query', err.stack))

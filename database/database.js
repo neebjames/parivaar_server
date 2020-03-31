@@ -2,7 +2,7 @@ import Sequelize from 'sequelize';
 import dotenv from 'dotenv'
 dotenv.config()
 
-const sequelize = new Sequelize(process.env.DATABASE_URL, {
+export const sequelize = new Sequelize(process.env.DATABASE_URL, {
   dialect: 'postgres',
   operatorsAliases: false,
   pool: {
@@ -12,5 +12,3 @@ const sequelize = new Sequelize(process.env.DATABASE_URL, {
     idle: 10000
   },
 });
-
-export default sequelize;

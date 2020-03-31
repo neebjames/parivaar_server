@@ -5,7 +5,7 @@ import path from 'path';
 import Sequelize from 'sequelize';
 const basename = path.basename(__filename);
 //const env = process.env.NODE_ENV || 'development';
-import sequelize from './../database.js';
+import {sequelize} from './../database';
 //const config = require(__dirname + '/../config/config.js')[env];
 const db = {};
 
