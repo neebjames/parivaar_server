@@ -5,6 +5,7 @@ import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 import cors from 'cors';
 import parivaarAPI from './routes/parivaarAPI.js';
+import db from './database/models';
 const app = express();
 
 app.use(logger('dev'));
@@ -32,6 +33,8 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   //res.render('error');
 });
-app.listen(process.env.PORT || 4000, () => console.log('Server listening on port 4000!'))
 
+db.sequelize.sync().then(function() {
+  app.listen(process.env.PORT || 4000, () => console.log('Server is listening now'))
+});
 //module.exports = app;
