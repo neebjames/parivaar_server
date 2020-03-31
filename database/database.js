@@ -1,10 +1,9 @@
 import Sequelize from 'sequelize';
+require('dotenv').config()
 
-const sequelize = new Sequelize('parivaar_db', 'postgres', 'root', {
-  host: 'localhost',
+const sequelize = new Sequelize(process.env.DATABASE_URL, {
   dialect: 'postgres',
   operatorsAliases: false,
-  port: 5432,
   pool: {
     max: 5,
     min: 0,
