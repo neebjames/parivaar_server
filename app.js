@@ -4,7 +4,7 @@ import path from 'path';
 import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 import cors from 'cors';
-import parivaarAPI from './routes/parivaarAPI.js';
+import parivaarAPI from './routes/parivaarAPI';
 import db from './database/models/index.js';
 const app = express();
 
