@@ -8,7 +8,7 @@ var _express = require('express');
 
 var _express2 = _interopRequireDefault(_express);
 
-var _query = require('./../database/query.js');
+var _query = require('./../database/query');
 
 var _query2 = _interopRequireDefault(_query);
 

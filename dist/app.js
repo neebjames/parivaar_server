@@ -28,9 +28,9 @@ var _parivaarAPI = require('./routes/parivaarAPI');
 
 var _parivaarAPI2 = _interopRequireDefault(_parivaarAPI);
 
-var _index = require('./database/models/index.js');
+var _models = require('./database/models');
 
-var _index2 = _interopRequireDefault(_index);
+var _models2 = _interopRequireDefault(_models);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -51,20 +51,8 @@ app.use(function (req, res, next) {
   next((0, _httpErrors2.default)(404));
 });
 
-// error handler
-app.use(function (err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
-
-  // render the error page
-  res.status(err.status || 500);
-  //res.render('error');
-});
-
-_index2.default.sequelize.sync().then(function () {
+_models2.default.sequelize.sync().then(function () {
   app.listen(process.env.PORT || 4000, function () {
     return console.log('Server is listening now');
   });
 });
-//module.exports = app;

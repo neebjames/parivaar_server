@@ -28,5 +28,3 @@ var sequelize = new _sequelize2.default(process.env.DATABASE_URL, {
 });
 
 exports.default = sequelize;
-
-// import {Pool} from 'pg'
