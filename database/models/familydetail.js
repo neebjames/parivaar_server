@@ -1,5 +1,5 @@
 'use strict';
-module.exports = (sequelize, DataTypes) => {
+const familyDetail = (sequelize, DataTypes) => {
   const FamilyDetail = sequelize.define('FamilyDetail', {
     name: DataTypes.STRING
   }, {});
@@ -8,3 +8,5 @@ module.exports = (sequelize, DataTypes) => {
   };
   return FamilyDetail;
 };
+
+export default familyDetail
