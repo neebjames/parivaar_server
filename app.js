@@ -5,7 +5,7 @@ import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 import cors from 'cors';
 import parivaarAPI from './routes/parivaarAPI.js';
-import db from './database/models';
+import db from './database/models/index.js';
 const app = express();
 
 app.use(logger('dev'));
